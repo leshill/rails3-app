@@ -28,7 +28,7 @@ application generators
 
 run 'curl -L http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js > public/javascripts/jquery.js'
 run 'curl -L http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js > public/javascripts/jquery-ui.js'
-run 'curl -L http://github.com/rails/jquery-ujs/raw/HEAD/src/rails.js > public/javascripts/rails.js'
+run 'curl -L http://github.com/rails/jquery-ujs/raw/master/src/rails.js > public/javascripts/rails.js'
 
 jquery = <<-JQUERY
 ActionView::Helpers::AssetTagHelper.register_javascript_expansion \
