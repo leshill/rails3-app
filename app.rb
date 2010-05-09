@@ -8,7 +8,7 @@ in_root do
 end
 
 empty_directory "lib/generators"
-run "git clone -depth 0 http://github.com/leshill/rails3_app.git lib/generators"
+run "git clone --depth 0 http://github.com/leshill/rails3_app.git lib/generators"
 remove_dir "lib/generators/.git"
 
 gem "haml", ">= 3.0.0.rc.4"
