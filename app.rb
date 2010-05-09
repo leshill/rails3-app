@@ -7,7 +7,7 @@ in_root do
   create_file ".rvmrc", rvmrc
 end
 
-create_dir "lib/generators"
+empty_directory "lib/generators"
 run "git clone -depth 0 http://github.com/leshill/rails3_app.git lib/generators"
 remove_dir "lib/generators/.git"
 
