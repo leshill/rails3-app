@@ -32,7 +32,7 @@ run 'curl -L http://github.com/rails/jquery-ujs/raw/HEAD/src/rails.js > public/j
 
 jquery = <<-JQUERY
 ActionView::Helpers::AssetTagHelper.register_javascript_expansion \
-  :jquery => %w(jquery jquery-ui rails application)
+  :jquery => %w(jquery jquery-ui rails)
 JQUERY
 
 initializer "jquery.rb", jquery
