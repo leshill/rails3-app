@@ -3,9 +3,7 @@ rvm_gemset_create_on_use_flag=1
 rvm gemset use #{app_name}
 RVMRC
 
-in_root do
-  create_file ".rvmrc", rvmrc
-end
+create_file ".rvmrc", rvmrc
 
 empty_directory "lib/generators"
 git :clone => "--depth 0 http://github.com/leshill/rails3-app.git lib/generators"
@@ -52,10 +50,8 @@ LAYOUT
 remove_file "app/views/layouts/application.html.erb"
 create_file "app/views/layouts/application.html.haml", layout
 
-in_root do
-  git :init
-  git :add => "."
-end
+git :init
+git :add => "."
 
 docs = <<-DOCS
 
