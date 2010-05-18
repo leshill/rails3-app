@@ -51,6 +51,7 @@ remove_file "app/views/layouts/application.html.erb"
 create_file "app/views/layouts/application.html.haml", layout
 
 create_file "log/.gitkeep"
+create_file "tmp/.gitkeep"
 
 git :init
 git :add => "."
