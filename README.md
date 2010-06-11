@@ -25,11 +25,8 @@ JavaScript Includes
 -------------------
 
 Since the Rails helper `javascript_include_tag :defaults` is looking for
-Prototype, we used [this](http://flow.handle.it/past/2010/2/9/jquery_in_rails)
-to add a new JavaScript expansion to pull in the jQuery libraries. Use it like
-so:
-
-    = javascript_include_tag :jquery
+Prototype, we use a snippet from Yehuda to change the default JavaScript
+Includes to be jQuery.
 
 git
 ---
