@@ -9,7 +9,7 @@ empty_directory "lib/generators"
 git :clone => "--depth 0 http://github.com/leshill/rails3-app.git lib/generators"
 remove_dir "lib/generators/.git"
 
-gem "factory_girl", ">= 1.3.0", :group => :test
+gem "factory_girl_rails", ">= 1.0.0", :group => :test
 gem "haml", ">= 3.0.12"
 gem "rspec-rails", ">= 2.0.0.beta.12", :group => :test
 
