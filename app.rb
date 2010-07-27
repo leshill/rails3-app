@@ -28,16 +28,20 @@ get "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js",  "public/
 get "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "public/javascripts/jquery-ui.js"
 get "http://github.com/rails/jquery-ujs/raw/master/src/rails.js", "public/javascripts/rails.js"
 
-jquery = <<-JQUERY
+if Rails::VERSION::STRING =~ /beta/
+  jquery = <<-JQUERY
 module ActionView::Helpers::AssetTagHelper
   remove_const :JAVASCRIPT_DEFAULT_SOURCES
   JAVASCRIPT_DEFAULT_SOURCES = %w(jquery.js jquery-ui.js rails.js)
 
   reset_javascript_include_default
 end
-JQUERY
+  JQUERY
 
-initializer "jquery.rb", jquery
+  initializer "jquery.rb", jquery
+else
+  gsub_file 'config/application.rb', 'config.action_view.javascript_expansions[:defaults] = %w()', 'config.action_view.javascript_expansions[:defaults] = %w(jquery.js jquery-ui.js rails.js)'
+end
 
 layout = <<-LAYOUT
 !!!
