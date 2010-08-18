@@ -1,15 +1,10 @@
 Rails 3, RSpec, Factory Girl, Haml, and jQuery
 ==============================================
 
-Easily generate a Rails 3 beta 4 application with RSpec, Factory Girl, Haml, and
+Easily generate a Rails 3 RC application with RSpec, Factory Girl, Haml, and
 jQuery in one line:
 
     % rails new my_app -J -T -m \
-    http://github.com/leshill/rails3-app/raw/master/app.rb
-
-### Rails 3 beta 3 or earlier?
-
-    % rails my_app -J -T -m \
     http://github.com/leshill/rails3-app/raw/master/app.rb
 
 ## Need Cucumber?
@@ -30,15 +25,14 @@ Generators
 This also gives you the Factory Girl and Haml Rails 3 generators &mdash; the
 generators for RSpec are in the RSpec gem &mdash; so that your factories and
 views are generated using Factory Girl and Haml, and that all your generated
-tests are specs. These generators are from the **rails3_generators** gem, we
-pulled them out to avoid all the other dependencies included in that gem.
+tests are specs. These generators are from the [ haml-rails
+](http://github.com/indirect/haml-rails) and [factory_girl_generator](http://github.com/leshill/factory_girl_generator) gems.
 
 JavaScript Includes
 -------------------
 
 Since the Rails helper `javascript_include_tag :defaults` is looking for
-Prototype, we use a snippet from Yehuda to change the default JavaScript
-Includes to be jQuery.
+Prototype, we change the default JavaScript includes to be jQuery.
 
 git
 ---
@@ -48,14 +42,7 @@ We love `git`, so the application has a git repo initialized with all the initia
 Wrap Up
 -------
 
-After the application has been generated, there are a few clean up commands to run:
-
-    % cd my_app
-    % gem install bundler
-    % bundle install
-    % bundle lock
-    % script/rails generate rspec:install
-
+After the application has been generated, there are a few final command to finish the install, check the output!
 
 Note on Patches/Pull Requests
 -----------------------------
