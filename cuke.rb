@@ -57,7 +57,7 @@ docs = <<-DOCS
 Run the following commands to complete the setup of #{app_name.humanize}:
 
 % cd #{app_name}
-% gem install bundler --pre
+% gem install bundler
 % bundle install
 % script/rails generate rspec:install
 % script/rails generate cucumber:install --rspec --capybara
