@@ -50,6 +50,7 @@ docs = <<-DOCS
 
 Run the following commands to complete the setup of #{app_name.humanize}:
 
+% rvm gemset create #{app_name}
 % cd #{app_name}
 % gem install bundler
 % bundle install
