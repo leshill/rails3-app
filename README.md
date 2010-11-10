@@ -33,7 +33,7 @@ Generators
 ----------
 
 We use the Factory Girl and Haml Rails 3 generators &mdash; the generators for
-RSpec and Fabrication are packages in their gems. These generators are from the
+RSpec and Fabrication are packaged within their respective gems. The Factory Girl and Haml generators are from the
 [ haml-rails ](http://github.com/indirect/haml-rails) and
 [factory_girl_generator](http://github.com/leshill/factory_girl_generator)
 gems.
