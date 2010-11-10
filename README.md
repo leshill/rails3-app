@@ -1,5 +1,13 @@
 Rails 3, RSpec, Fabrication or Factory Girl, Haml, and jQuery
-==============================================
+=============================================================
+
+# Please note
+
+Thomas Maas points out that the recent switch by github to only support https
+has exposed a bug in Rails (see
+https://rails.lighthouseapp.com/projects/8994/tickets/5926).  In order to use
+these templates, you should clone the repo and refer to the templates from your
+local file system instead of their github uris as shown below.
 
 Easily generate a Rails 3 application with RSpec, Factory Girl, Haml, and
 jQuery in one line:
