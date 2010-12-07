@@ -4,9 +4,9 @@ RVMRC
 
 create_file ".rvmrc", rvmrc
 
-gem "fabrication", ">= 0.9.0"
+gem "fabrication", ">= 0.9.4"
 gem "haml-rails", ">= 0.3.4"
-gem "rspec-rails", ">= 2.0.1", :group => [:development, :test]
+gem "rspec-rails", ">= 2.2.1", :group => [:development, :test]
 
 generators = <<-GENERATORS
 

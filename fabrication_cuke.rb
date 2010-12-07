@@ -7,10 +7,10 @@ create_file ".rvmrc", rvmrc
 gem "capybara", ">= 0.4.0", :group => [:cucumber, :test]
 gem "cucumber-rails", ">= 0.3.2", :group => [:cucumber, :test]
 gem "database_cleaner", ">= 0.5.2", :group => [:cucumber, :test]
-gem "fabrication", ">= 0.9.0"
+gem "fabrication", ">= 0.9.4"
 gem "haml-rails", ">= 0.3.4"
 gem "launchy", ">= 0.3.7", :group => [:cucumber, :test]
-gem "rspec-rails", ">= 2.0.1", :group => [:cucumber, :development, :test]
+gem "rspec-rails", ">= 2.2.1", :group => [:cucumber, :development, :test]
 gem "spork", ">= 0.8.4", :group => [:cucumber, :test]
 
 generators = <<-GENERATORS

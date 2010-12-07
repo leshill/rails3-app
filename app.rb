@@ -7,7 +7,7 @@ create_file ".rvmrc", rvmrc
 gem "factory_girl_rails", ">= 1.0.0", :group => :test
 gem "factory_girl_generator", ">= 0.0.1", :group => [:development, :test]
 gem "haml-rails", ">= 0.3.4"
-gem "rspec-rails", ">= 2.0.1", :group => [:development, :test]
+gem "rspec-rails", ">= 2.2.1", :group => [:development, :test]
 
 generators = <<-GENERATORS
 
