@@ -9,6 +9,10 @@ https://rails.lighthouseapp.com/projects/8994/tickets/5926).  In order to use
 these templates, you should clone the repo and refer to the templates from your
 local file system instead of their github uris as shown below.
 
+    % rails new my_app -J -T -m rails3-app/app.rb
+
+# Usage
+
 Easily generate a Rails 3 application with RSpec, Factory Girl, Haml, and
 jQuery in one line:
 
