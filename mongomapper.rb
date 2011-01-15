@@ -29,6 +29,7 @@ get "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.8/jquery-ui.min.js", "pub
 `curl https://github.com/rails/jquery-ujs/raw/master/src/rails.js -o public/javascripts/rails.js`
 
 gsub_file 'config/application.rb', 'config.action_view.javascript_expansions[:defaults] = %w()', 'config.action_view.javascript_expansions[:defaults] = %w(jquery.js jquery-ui.js rails.js)'
+gsub_file 'config/application.rb', 'config.filter_parameters += [:password]', 'config.filter_parameters += [:password, :password_confirmation]'
 
 layout = <<-LAYOUT
 !!!
