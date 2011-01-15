@@ -17,24 +17,24 @@ Easily generate a Rails 3 application with RSpec, Factory Girl, Haml, and
 jQuery in one line:
 
     % rails new my_app -J -T -m \
-    http://github.com/leshill/rails3-app/raw/master/app.rb
+    https://github.com/leshill/rails3-app/raw/master/app.rb
 
 ## Need Cucumber?
 
 Use this generator file instead:
 
     % rails new my_app -J -T -m \
-    http://github.com/leshill/rails3-app/raw/master/cuke.rb
+    https://github.com/leshill/rails3-app/raw/master/cuke.rb
 
 ## Want Fabrication instead of Factory Girl?
 
 Use either of the following generators instead:
 
     % rails new my_app -J -T -m \
-    http://github.com/leshill/rails3-app/raw/master/fabrication.rb
+    https://github.com/leshill/rails3-app/raw/master/fabrication.rb
 
     % rails new my_app -J -T -m \
-    http://github.com/leshill/rails3-app/raw/master/fabrication_cuke.rb
+    https://github.com/leshill/rails3-app/raw/master/fabrication_cuke.rb
 
 rvm
 ---
