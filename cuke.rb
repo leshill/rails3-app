@@ -1,9 +1,3 @@
-rvmrc = <<-RVMRC
-rvm gemset use #{app_name}
-RVMRC
-
-create_file ".rvmrc", rvmrc
-
 gem "capybara", ">= 0.4.0", :group => [:cucumber, :test]
 gem "cucumber-rails", ">= 0.3.2", :group => [:cucumber, :test]
 gem "database_cleaner", ">= 0.5.2", :group => [:cucumber, :test]
@@ -26,7 +20,7 @@ application generators
 
 get "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js",  "public/javascripts/jquery.js"
 get "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js", "public/javascripts/jquery-ui.js"
-`curl http://github.com/rails/jquery-ujs/raw/master/src/rails.js -o public/javascripts/rails.js`
+`curl https://github.com/rails/jquery-ujs/raw/master/src/rails.js -o public/javascripts/rails.js`
 
 gsub_file 'config/application.rb', 'config.action_view.javascript_expansions[:defaults] = %w()', 'config.action_view.javascript_expansions[:defaults] = %w(jquery.js jquery-ui.js rails.js)'
 
@@ -55,8 +49,8 @@ docs = <<-DOCS
 
 Run the following commands to complete the setup of #{app_name.humanize}:
 
-% rvm gemset create #{app_name}
 % cd #{app_name}
+% rvm use --create --rvmrc default@#{app_name}
 % gem install bundler
 % bundle install
 % script/rails generate rspec:install

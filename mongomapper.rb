@@ -1,9 +1,3 @@
-rvmrc = <<-RVMRC
-rvm gemset use #{app_name}
-RVMRC
-
-create_file ".rvmrc", rvmrc
-
 gem "mongo_mapper", :git => "https://github.com/jnunemaker/mongomapper.git", :branch => "rails3"
 gem "bson_ext"
 gem "factory_girl_rails", "1.1.beta1", :group => :test
@@ -56,8 +50,8 @@ docs = <<-DOCS
 
 Run the following commands to complete the setup of #{app_name.humanize}:
 
-% rvm gemset create #{app_name}
 % cd #{app_name}
+% rvm use --create --rvmrc default@#{app_name}
 % gem install bundler
 % bundle install
 % rails g rspec:install

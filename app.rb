@@ -1,9 +1,3 @@
-rvmrc = <<-RVMRC
-rvm gemset use #{app_name}
-RVMRC
-
-create_file ".rvmrc", rvmrc
-
 gem "factory_girl_rails", ">= 1.0.0", :group => :test
 gem "factory_girl_generator", ">= 0.0.1", :group => [:development, :test]
 gem "haml-rails", ">= 0.3.4"
@@ -50,8 +44,8 @@ docs = <<-DOCS
 
 Run the following commands to complete the setup of #{app_name.humanize}:
 
-% rvm gemset create #{app_name}
 % cd #{app_name}
+% rvm use --create --rvmrc default@#{app_name}
 % gem install bundler
 % bundle install
 % script/rails generate rspec:install
