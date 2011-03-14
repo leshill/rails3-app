@@ -1,16 +1,6 @@
 Rails 3, RSpec, Fabrication or Factory Girl, Haml, and jQuery
 =============================================================
 
-# Please note
-
-Thomas Maas points out that the recent switch by github to only support https
-has exposed a bug in Rails (see
-https://rails.lighthouseapp.com/projects/8994/tickets/5926).  In order to use
-these templates, you should clone the repo and refer to the templates from your
-local file system instead of their github uris as shown below.
-
-    % rails new my_app -J -T -m rails3-app/app.rb
-
 # Usage
 
 Easily generate a Rails 3 application with RSpec, Factory Girl, Haml, and
@@ -50,11 +40,10 @@ RSpec and Fabrication are packaged within their respective gems. The Factory Gir
 [factory_girl_generator](http://github.com/leshill/factory_girl_generator)
 gems.
 
-JavaScript Includes
+jQuery
 -------------------
 
-Since the Rails helper `javascript_include_tag :defaults` is looking for
-Prototype, we change the default JavaScript includes to be jQuery.
+We use the jquery-rails generator to pull in the latest and greatest `jQuery` into the app.
 
 git
 ---
