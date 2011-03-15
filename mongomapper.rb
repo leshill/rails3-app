@@ -1,11 +1,11 @@
-gem "mongo_mapper", :git => "https://github.com/jnunemaker/mongomapper.git", :branch => "rails3"
 gem "bson_ext"
 gem "factory_girl_rails", "1.1.beta1", :group => :test
 gem "haml-rails", ">= 0.3.4"
 gem "jquery-rails", ">= 0.2.7"
+gem "mongo_mapper", :git => "https://github.com/jnunemaker/mongomapper.git", :branch => "rails3"
+gem "mongo_ext", :group => :production
 gem "rspec-rails", "~> 2.4", :group => [:development, :test]
 gem "rails3-generators", :group => [:development, :test]
-gem "mongo_ext", :group => :production
 
 generators = <<-GENERATORS
 
