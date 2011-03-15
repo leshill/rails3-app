@@ -1,7 +1,7 @@
-gem "fabrication", ">= 0.9.4"
+gem "fabrication", ">= 0.9.5"
 gem "haml-rails", ">= 0.3.4"
 gem "jquery-rails", ">= 0.2.7"
-gem "rspec-rails", ">= 2.2.1", :group => [:development, :test]
+gem "rspec-rails", ">= 2.5.0", :group => [:development, :test]
 
 generators = <<-GENERATORS
 

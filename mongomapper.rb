@@ -4,7 +4,7 @@ gem "haml-rails", ">= 0.3.4"
 gem "jquery-rails", ">= 0.2.7"
 gem "mongo_mapper", :git => "https://github.com/jnunemaker/mongomapper.git", :branch => "rails3"
 gem "mongo_ext", :group => :production
-gem "rspec-rails", "~> 2.4", :group => [:development, :test]
+gem "rspec-rails", ">= 2.5.0", :group => [:development, :test]
 gem "rails3-generators", :group => [:development, :test]
 
 generators = <<-GENERATORS
