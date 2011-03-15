@@ -26,6 +26,13 @@ Use either of the following generators instead:
     % rails new my_app -J -T -m \
     https://github.com/leshill/rails3-app/raw/master/fabrication_cuke.rb
 
+## Use MongoMapper?
+
+Use this generator file:
+
+    % rails new my_app -J -T -m \
+    https://github.com/leshill/rails3-app/raw/master/mongomapper.rb
+
 rvm
 ---
 
