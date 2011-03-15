@@ -19,6 +19,8 @@ GENERATORS
 
 application generators
 
+gsub_file 'config/application.rb', 'config.filter_parameters += [:password]', 'config.filter_parameters += [:password, :password_confirmation]'
+
 layout = <<-LAYOUT
 !!!
 %html
