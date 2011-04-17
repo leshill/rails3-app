@@ -49,6 +49,9 @@ RVM.rvm :gemset, :create, app_name
 say_status "rvm", "use default@#{app_name}", :green
 RVM.rvm :use, "default@#{app_name}", :rvmrc => true
 
+say_status "rvm", "rvmrc trust"
+RVM.rvm :rvmrc, :trust
+
 #for some reason, multiple rvmrcs are created, torch the extras
 Dir.glob('.rvmrc.*').each do |f|
   remove_file f
@@ -73,4 +76,3 @@ git :init
 git :add => "."
 
 say_status "done", app_name.humanize, :green
-
