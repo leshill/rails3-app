@@ -1,3 +1,7 @@
+rvm_dir = File.join([ENV['rvm_path'], 'lib'])
+$LOAD_PATH.unshift(rvm_dir) unless $LOAD_PATH.include?(rvm_dir)
+require 'rvm'
+
 gem "fabrication", ">= 0.9.5"
 gem "haml-rails", ">= 0.3.4"
 gem "jquery-rails", ">= 0.2.7"
@@ -31,23 +35,35 @@ LAYOUT
 remove_file "app/views/layouts/application.html.erb"
 create_file "app/views/layouts/application.html.haml", layout
 
+say_status("rvm", "use default", :green)
+RVM.use! "default"
+
+say_status "rvm", "create gemset #{app_name}", :green
+RVM.rvm :gemset, :create, app_name
+
+say_status "rvm", "use default@#{app_name}", :green
+RVM.rvm :use, "default@#{app_name}", :rvmrc => true
+
+#for some reason, multiple rvmrcs are created, torch the extras
+Dir.glob('.rvmrc.*').each do |f|
+  remove_file f
+end
+
+def run_rvm_cmd(cmd)
+  say_status "rvm", cmd, :green
+  shell_output = RVM.run(cmd)
+  say_status "rvm", shell_output.stderr, :yellow if shell_output.stderr != ''
+end
+
+run_rvm_cmd('gem install bundler')
+run_rvm_cmd('bundle install')
+run_rvm_cmd('script/rails generate jquery:install')
+run_rvm_cmd('script/rails generate rspec:install')
+
 create_file "log/.gitkeep"
 create_file "tmp/.gitkeep"
 
 git :init
 git :add => "."
 
-docs = <<-DOCS
-
-Run the following commands to complete the setup of #{app_name.humanize}:
-
-% cd #{app_name}
-% rvm use --create --rvmrc default@#{app_name}
-% gem install bundler
-% bundle install
-% script/rails generate jquery:install
-% script/rails generate rspec:install
-
-DOCS
-
-log docs
+say_status "done", app_name.humanize, :green
