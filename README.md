@@ -6,31 +6,31 @@ Rails 3, RSpec, Fabrication or Factory Girl, Haml, and jQuery
 Easily generate a Rails 3 application with RSpec, Factory Girl, Haml, and
 jQuery in one line:
 
-    % rails new my_app -J -T -m \
+    % rails new my_app --skip-bundle -J -T -m \
     https://github.com/leshill/rails3-app/raw/master/app.rb
 
 ## Need Cucumber?
 
 Use this generator file instead:
 
-    % rails new my_app -J -T -m \
+    % rails new my_app --skip-bundle -J -T -m \
     https://github.com/leshill/rails3-app/raw/master/cuke.rb
 
 ## Want Fabrication instead of Factory Girl?
 
 Use either of the following generators instead:
 
-    % rails new my_app -J -T -m \
+    % rails new my_app --skip-bundle -J -T -m \
     https://github.com/leshill/rails3-app/raw/master/fabrication.rb
 
-    % rails new my_app -J -T -m \
+    % rails new my_app --skip-bundle -J -T -m \
     https://github.com/leshill/rails3-app/raw/master/fabrication_cuke.rb
 
 ## Use MongoMapper?
 
 Use this generator file:
 
-    % rails new my_app -J -T -m \
+    % rails new my_app --skip-bundle -J -T -m \
     https://github.com/leshill/rails3-app/raw/master/mongomapper.rb
 
 rvm
